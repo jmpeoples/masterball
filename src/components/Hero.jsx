@@ -326,13 +326,13 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-              Buying balls made simple.
+              Tokenless ball delivery.
             </h1>
             <p className="mt-6 text-lg text-gray-600">
               Need balls? {'\n'}
-              Just place an order on the app. 
-              A ball boy will dispense the balls and deliver. 
-              Keep enjoying the green. 
+              Just subscribe.
+              Pick up your ball box at the pro shop. 
+              No more waiting in line.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <AppStoreLink />
