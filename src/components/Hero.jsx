@@ -331,7 +331,7 @@ export function Hero() {
             <p className="mt-6 text-lg text-gray-600">
               Need balls? {'\n'}
               Just place an order on the app. 
-              A masterball boy will dispense the balls and deliver. 
+              A ball boy will dispense the balls and deliver. 
               Keep enjoying the green. 
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
