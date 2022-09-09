@@ -16,6 +16,7 @@ import logoForbes from '@/images/logos/forbes.svg'
 import logoHuffpost from '@/images/logos/huffpost.svg'
 import logoTechcrunch from '@/images/logos/techcrunch.svg'
 import logoWired from '@/images/logos/wired.svg'
+import ContactForm from './ContactForm'
 
 function BackgroundIllustration(props) {
   let id = useId()
@@ -148,28 +149,28 @@ function Chart({
       className={clsx(className, 'overflow-visible')}
       {...(interactionEnabled
         ? {
-            onPointerLeave: () => onChangeActivePointIndex(null),
-            onPointerMove: (event) => {
-              let x = event.nativeEvent.offsetX
-              let closestPointIndex
-              let closestDistance = Infinity
-              for (
-                let pointIndex = 0;
-                pointIndex < points.length;
-                pointIndex++
-              ) {
-                let point = points[pointIndex]
-                let distance = Math.abs(point.x - x)
-                if (distance < closestDistance) {
-                  closestDistance = distance
-                  closestPointIndex = pointIndex
-                } else {
-                  break
-                }
+          onPointerLeave: () => onChangeActivePointIndex(null),
+          onPointerMove: (event) => {
+            let x = event.nativeEvent.offsetX
+            let closestPointIndex
+            let closestDistance = Infinity
+            for (
+              let pointIndex = 0;
+              pointIndex < points.length;
+              pointIndex++
+            ) {
+              let point = points[pointIndex]
+              let distance = Math.abs(point.x - x)
+              if (distance < closestDistance) {
+                closestDistance = distance
+                closestPointIndex = pointIndex
+              } else {
+                break
               }
-              onChangeActivePointIndex(closestPointIndex)
-            },
-          }
+            }
+            onChangeActivePointIndex(closestPointIndex)
+          },
+        }
         : {})}
       {...props}
     >
@@ -286,14 +287,13 @@ function AppDemo() {
                     percentageChange >= 0 ? 'text-cyan-500' : 'text-gray-500'
                   )}
                 >
-                  {`${
-                    percentageChange >= 0 ? '+' : ''
-                  }${percentageChange.toFixed(2)}%`}
+                  {`${percentageChange >= 0 ? '+' : ''
+                    }${percentageChange.toFixed(2)}%`}
                 </div>
               )}
             </div>
             <div className="mt-3 rounded-lg bg-gray-50 ring-1 ring-inset ring-black/5">
-             
+
             </div>
             <div className="mt-4 rounded-lg bg-cyan-500 py-2 px-4 text-center text-sm font-semibold text-white">
               Order Balls
@@ -331,7 +331,7 @@ export function Hero() {
             <p className="mt-6 text-lg text-gray-600">
               Need balls? {'\n'}
               Just subscribe.
-              Pick up your ball box at the pro shop. 
+              Pick up your ball box at the pro shop.
               No more waiting in line.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
@@ -343,6 +343,7 @@ export function Hero() {
                 <PlayIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2.5">Watch the video</span>
               </Button>
+              <ContactForm />
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
