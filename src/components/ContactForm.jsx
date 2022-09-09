@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export default () => {
+const ContactForm = () => {
     const [status, setStatus] = useState({
         submitted: false,
         submitting: false,
@@ -95,3 +95,5 @@ export default () => {
         </main>
     );
 };
+
+export default ContactForm;
