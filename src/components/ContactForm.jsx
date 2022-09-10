@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { TextField } from './Fields';
+import { Button } from '@/components/Button'
 
 const ContactForm = () => {
     const [status, setStatus] = useState({
@@ -60,33 +62,34 @@ const ContactForm = () => {
     };
     return (
         <main>
-            <h1>React and Formspree</h1>
-            <hr />
-            <form onSubmit={handleOnSubmit}>
-                <label htmlFor="email">Email</label>
-                <input
+            <form className="flex w-full justify-center md:w-auto" onSubmit={handleOnSubmit}>
+                <TextField
                     id="email"
+                    className="w-60 min-w-0 shrink"
                     type="email"
                     name="_replyto"
+                    aria-label="Email address"
+                    placeholder="Email address"
+                    autoComplete="email"
                     onChange={handleOnChange}
                     required
                     value={inputs.email}
                 />
-                <label htmlFor="message">Message</label>
+                {/* <label htmlFor="message">Message</label>
                 <textarea
                     id="message"
                     name="message"
                     onChange={handleOnChange}
                     required
                     value={inputs.message}
-                />
-                <button type="submit" disabled={status.submitting}>
+                /> */}
+                <Button type="submit" disabled={status.submitting}>
                     {!status.submitting
                         ? !status.submitted
                             ? 'Submit'
                             : 'Submitted'
                         : 'Submitting...'}
-                </button>
+                </Button>
             </form>
             {status.info.error && (
                 <div className="error">Error: {status.info.msg}</div>
