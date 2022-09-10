@@ -65,7 +65,7 @@ const ContactForm = () => {
             <form className="flex w-full justify-center md:w-auto" onSubmit={handleOnSubmit}>
                 <TextField
                     id="email"
-                    className="w-60 min-w-0 shrink"
+                    className="w-60 min-w-0 shrink mr-4"
                     type="email"
                     name="_replyto"
                     aria-label="Email address"
@@ -75,14 +75,6 @@ const ContactForm = () => {
                     required
                     value={inputs.email}
                 />
-                {/* <label htmlFor="message">Message</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    onChange={handleOnChange}
-                    required
-                    value={inputs.message}
-                /> */}
                 <Button type="submit" disabled={status.submitting}>
                     {!status.submitting
                         ? !status.submitted
