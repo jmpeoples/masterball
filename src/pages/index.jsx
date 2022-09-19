@@ -9,8 +9,11 @@ import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Reviews } from '@/components/Reviews'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
+import mixpanel from 'mixpanel-browser';
 
 export default function Home() {
+  mixpanel.init('acc2963ea857676b29b8a0a67802a22f', {debug: true}); 
+mixpanel.track('masterball login');
   return (
     <>
       <Head>
