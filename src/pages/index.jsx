@@ -141,8 +141,9 @@ return (
               </p>
               <div className="mt-8 flex gap-x-4 sm:justify-center">
                 <a
-                  href="#"
+                  href="https://twitter.com/claycityDevelop"
                   className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
+                  target="blank"
                 >
                   Twitter
                   <span className="text-indigo-200" aria-hidden="true">
@@ -150,8 +151,9 @@ return (
                   </span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/watch?v=F41QqV8U5bo"
                   className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                  target="blank"
                 >
                   YouTube
                   <span className="text-gray-400" aria-hidden="true">
@@ -159,8 +161,9 @@ return (
                   </span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/claycitydeveloping/"
                   className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                  target="blank"
                 >
                   Instagram
                   <span className="text-gray-400" aria-hidden="true">
